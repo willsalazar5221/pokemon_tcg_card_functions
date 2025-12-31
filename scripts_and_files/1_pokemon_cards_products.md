@@ -1,4 +1,4 @@
-# `1\_pokemon\_cards\_funcs`
+# `1_pokemon_cards_funcs`
 
 
 **Author: William B. Salazar**
@@ -24,7 +24,7 @@ Python blocks/lines will be preceded by >>> for clarity.
 
 ## INITIAL SETUP
 
-For this procedure, we solely need to run Python scripts and functions. I primarily used Jupyter Notebooks from Anaconda to run this whole process. I currently don't have an easy website to run this from, but the example notebooks are simple enough. Two example notebooks in `example\_notebooks` are made for your convenience of all the functions you can use.
+For this procedure, we solely need to run Python scripts and functions. I primarily used Jupyter Notebooks from Anaconda to run this whole process. I currently don't have an easy website to run this from, but the example notebooks are simple enough. Two example notebooks in `example_notebooks` are made for your convenience of all the functions you can use.
 
 
 ## Background
@@ -33,11 +33,11 @@ For both scripts, the main function is to record the card/product and know the m
 
 There are several functions used, but only three main ones you will use. I will detail them below, however in the scripts you with also find docstrings that detail the functions in great detail.
 
-One small background detail I have embedded into the first functions is the flag of whether you should grade your card. This binary "Yes" or "No" flag is decided by the function `determine\_psa\_worth`. The price to grade a card through PSA (as of December 2025) is 21.99. I like to grade cards if I know the value is worth double the cost of grading said card. Hence, I use the formula (on line 243)
+One small background detail I have embedded into the first functions is the flag of whether you should grade your card. This binary "Yes" or "No" flag is decided by the function `determine_psa_worth`. The price to grade a card through PSA (as of December 2025) is 21.99. I like to grade cards if I know the value is worth double the cost of grading said card. Hence, I use the formula (on line 243)
 
-$$min_price_grade = 22 \* 2.2$$
+$$min\_price\_grade = 22 \* 2.2$$
 
-,where min\_price\_grade is checked against the price of the PSA 10 version of the card. This is assuming you get a PSA 10, which will depend wildly on the card's condition and the mood of the grader. I rounded up and added a .2 multiplier to account for tax or fees. This is easy to change for your purposes and how you value cards.
+,where `min\_price\_grade` is checked against the price of the PSA 10 version of the card. This is assuming you get a PSA 10, which will depend wildly on the card's condition and the mood of the grader. I rounded up and added a .2 multiplier to account for tax or fees. This is easy to change for your purposes and how you value cards.
 
 
 
