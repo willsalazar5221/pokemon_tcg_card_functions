@@ -24,7 +24,7 @@ Python blocks/lines will be preceded by >>> for clarity.
 
 ## INITIAL SETUP
 
-For this procedure, we solely need to run Python scripts and functions. I primarily used Jupyter Notebooks from Anaconda to run this whole process. I currently don't have an easy website to run this from, but the example notebooks are simple enough. Two example notebooks in `example_notebooks` are made for your convenience of all the functions you can use.
+For this procedure, we solely need to run Python scripts and functions. I primarily used Jupyter Notebooks from Anaconda to run this whole process. I currently don't have an easy website to run this from, but the example notebooks are simple enough. For these functions, under `example_notebooks` you can find the notebook titled `example_1_recording.ipynb`, made for your convenience showcasing all the functions you can use.
 
 
 ## Background
