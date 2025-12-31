@@ -35,9 +35,9 @@ There are several functions used, but only three main ones you will use. I will 
 
 One small background detail I have embedded into the first functions is the flag of whether you should grade your card. This binary "Yes" or "No" flag is decided by the function `determine_psa_worth`. The price to grade a card through PSA (as of December 2025) is 21.99. I like to grade cards if I know the value is worth double the cost of grading said card. Hence, I use the formula (on line 243)
 
-$$ min_price_grade = 22 \* 2.2$$
+$$ min\\_price\\_grade = 22 \* 2.2$$
 
-,where `min\\_price\\_grade` is checked against the price of the PSA 10 version of the card. This is assuming you get a PSA 10, which will depend wildly on the card's condition and the mood of the grader. I rounded up and added a .2 multiplier to account for tax or fees. This is easy to change for your purposes and how you value cards.
+,where `min_price_grade` is checked against the price of the PSA 10 version of the card. This is assuming you get a PSA 10, which will depend wildly on the card's condition and the mood of the grader. I rounded up and added a .2 multiplier to account for tax or fees. This is easy to change for your purposes and how you value cards.
 
 
 
