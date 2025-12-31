@@ -28,11 +28,11 @@ For this procedure, we solely need to run Python scripts and functions. I primar
 
 The code is fairly straightforward here with some plotting routines for visualization and Panda DataFrame manipulations. To find the accurate page number and the slot on the 3x3 grid, I devised the following. An example would be everyone's favorite Pokémon, Caterpie. Caterpie's national dex number is 10. If a page fits 9 cards, Caterpie is on page 2, the first card on the page (this would be top left, since we read the page from left to right, top to bottom). Thus, we use simple division. The formula for the page and the slot number is as follows
 
-$$page\\_number = poke\\_national\\_dex\\_num \\/\\/ 9$$
+$$page\\_number = poke\\_national\\_dex\\_num \slash \slash 9$$
 
 and 
 
-$$page\\_index = poke\\_national\\_dex\\_num \\%  9$$ 
+$$page\\_index = poke\\_national\\_dex\\_num \\% \space 9$$ 
 
 
 In non-computer coding, this is simply the quotient and the remainder. We need to make our numbers in base 9 essentially. Notice if you punch in 10/9 into a calculator, we get 1.1 (rounded). So, our page number is wrong, thus we add one to it. Our index on the page is correct though, so we leave it as is. However there is a case where a number is divisible by 9. Think of 18. This Pokemon (Pidgeot), should land on page 2, bottom right. We note that 18/9 is two. There is no remainder though. The page is now right, but the remainder is wrong. Hence for this case we keep the page and set the remainder to be 9. The function `plot_page_pos` does this arithmetic. The rest of the code helps to keep a record of all this.
@@ -86,6 +86,7 @@ This function is to help check if a card exists in your records and where it is 
 <br>
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; User is prompted to enter name of Pokémon.
+
 
 
 
