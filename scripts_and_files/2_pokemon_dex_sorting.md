@@ -32,7 +32,7 @@ $$page\\_number = poke\\_national\\_dex\\_num / / 9$$
 
 and 
 
-$$page\\_index = poke\\_national\\_dex\\_num \% 9$$ 
+$$page\\_index = poke\\_national\\_dex\\_num \\% 9$$ 
 
 
 In non-computer coding, this is simply the quotient and the remainder. We need to make our numbers in base 9 essentially. Notice if you punch in 10/9 into a calculator, we get 1.1 (rounded). So, our page number is wrong, thus we add one to it. Our index on the page is correct though, so we leave it as is. However there is a case where a number is divisible by 9. Think of 18. This Pokemon (Pidgeot), should land on page 2, bottom right. We note that 18/9 is two. There is no remainder though. The page is now right, but the remainder is wrong. Hence for this case we keep the page and set the remainder to be 9. The function `plot_page_pos` does this arithmetic. The rest of the code helps to keep a record of all this.
@@ -86,4 +86,5 @@ This function is to help check if a card exists in your records and where it is 
 <br>
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; User is prompted to enter name of Pokémon.
+
 
