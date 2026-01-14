@@ -10,13 +10,15 @@ This recipe guides you through the two different scripts prepared for sorting an
 
 ## Version History
 
-* `poke_cards_funcs_v4.py` (v4) - November 2025 by W. B. Salazar
+* `poke_cards_funcs_v5.py` (v5) - Janaury 2026 by W. B. Salazar
 
 This version has been streamlined to work using a single function to add and update card pricing. Other functions added to remove cards and multi-update cards all at once.
 
+v5 now includes a `quantity` column for better collection tracking. 2 new user friendly functions have been added to update quantity and pricing. Bug fix in `add_card` function resolved (would not properly save updated price if card was already in the collection).
+
 * `poke_product_funcs_v1.py` (v1) - November 2025 by W. B. Salazar
 
-Primarily built from the above function. Since products are not graded, I removed this column in the saved csv file.
+Primarily built from the above script. Since products are not graded, I removed this column in the saved csv file.
 
 Python blocks/lines will be preceded by >>> for clarity.
 
@@ -65,7 +67,7 @@ The purpose of this function is to initialize an empty csv file to record and ke
 
 **update\_poke\_df(poke\_csv\_name)**
 
-Main function to update your csv file. Once you run the line, it will prompt the user to enter a card name or url. If a card name is entered, it will search your csv file and ask to update it if it exists. If a URL is entered, the card is entered into the csv file if it does not exist already. If it does exist, it prompts to update.
+Main function to update your csv file. Once you run the line, it will prompt the user to enter a card name or url. If a card name is entered, it will search your csv file and ask to update it if it exists. If a URL is entered, the card is entered into the csv file if it does not exist already. If it does exist, it prompts to update the price or quantity. User can decide based on prompt numbers 1 or 2. If a user updates the quantity, another prompt to udate by adding one more or manually inputting quantity is asked.
 
   **Parameters:  poke\_csv\_name  :  *str***
 <br>
@@ -97,8 +99,30 @@ Remove a card from the csv file. It will prompt the user to either enter the ind
 
 
 
-## ${\\color{red}Product \\space Functions}$
+### ${\\color{purple} Updating \\space Single \space Card \space Price }$
 
+**user\_update\_price(poke\_csv\_name)**
+
+Update the price of a single card in your collection. Prompts for the index number in the dataframe to select the card.
+
+  **Parameters:  poke\_csv\_name  :  *str***
+<br>
+           Name of the csv file with all the cards (include .csv extension)
+
+
+### ${\\color{purple} Updating \\space Single \space Card \space Quantity }$
+
+**user\_update\_quantity(poke\_csv\_name)**
+
+Update the quantity of a single card in your collection. Prompts for the index number in the dataframe to select the card. Prompts the user for the total number now in the collection.
+
+  **Parameters:  poke\_csv\_name  :  *str***
+<br>
+           Name of the csv file with all the cards (include .csv extension)
+
+
+
+## ${\\color{red}Product \\space Functions}$
 
 
 ### ${\\color{purple} Making \\space New \\space CSV \\space File }$
