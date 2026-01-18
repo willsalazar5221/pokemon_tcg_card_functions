@@ -10,15 +10,17 @@ This recipe guides you through the two different scripts prepared for sorting an
 
 ## Version History
 
-* `poke_cards_funcs_v5.py` (v5) - Janaury 2026 by W. B. Salazar
+* `poke_cards_funcs_v5.py` (v5) - Jan. 2026 by W. B. Salazar
 
 This version has been streamlined to work using a single function to add and update card pricing. Other functions added to remove cards and multi-update cards all at once.
 
-v5 now includes a `quantity` column for better collection tracking. 2 new user friendly functions have been added to update quantity and pricing. Bug fix in `add_card` function resolved (would not properly save updated price if card was already in the collection).
+**v5**: Now includes a `quantity` column for better collection tracking. 2 new user friendly functions have been added to update quantity and pricing. Bug fix in `add_card` function resolved (would not properly save updated price if card was already in the collection).
 
-* `poke_product_funcs_v1.py` (v1) - November 2025 by W. B. Salazar
+* `poke_product_funcs_v2.py` (v2) - Jan. 2026 by W. B. Salazar
 
 Primarily built from the above script. Since products are not graded, I removed this column in the saved csv file.
+
+**v2**: Now includes ability to update quantity, not just price, when using `update_poke_prod_df` function. Also, function renamed to `user_update_quantity_prod` for consistency purposes.
 
 Python blocks/lines will be preceded by >>> for clarity.
 
@@ -163,7 +165,7 @@ Supplemental function to update your whole csv file. It runs through each produc
 
 ### ${\\color{purple} Updating \\space Quantity }$
 
-**update\_quant\_prod(poke\_csv\_name)**
+**user\_update\_quantity\_prod(poke\_csv\_name)**
 
 Update the quantity of a product from the csv file. It will prompt the user to enter the index of the item in the DataFrame and ask `"How many do you own now?"`.
 
